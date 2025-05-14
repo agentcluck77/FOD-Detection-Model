@@ -1,0 +1,11 @@
+{
+  "dataset_path": "data/processed/fod_yolo",
+  "randomization_level": "extreme",
+  "preserve_class_balance": true,
+  "splits": {
+    "train": 23640,
+    "val": 6745,
+    "test": 3408
+  },
+  "backup_created_at": "data/processed/fod_yolo_backup"
+}

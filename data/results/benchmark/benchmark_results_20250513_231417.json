@@ -1,0 +1,156 @@
+{
+  "system_info": {
+    "python_version": "3.9.21.final.0 (64 bit)",
+    "platform": "Unknown",
+    "cpu": {
+      "brand": "Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz",
+      "arch": "X86_64",
+      "cores": 4,
+      "frequency": 3497.0089999999996
+    },
+    "memory": {
+      "total_gb": 15.552982330322266,
+      "available_gb": 12.476253509521484,
+      "percent_used": 19.8
+    },
+    "gpu": {
+      "name": "NVIDIA GeForce GTX 1060 3GB",
+      "memory_total": 2.9351806640625,
+      "memory_allocated": 0.0,
+      "compute_capability": [
+        6,
+        1
+      ]
+    },
+    "pytorch_version": "2.5.1",
+    "device": "cuda"
+  },
+  "inference_speed": {
+    "320x320": {
+      "avg_time_ms": 7.322506904602051,
+      "fps": 136.56525190457927,
+      "meets_requirement": true
+    },
+    "416x416": {
+      "avg_time_ms": 7.3982954025268555,
+      "fps": 135.1662708221213,
+      "meets_requirement": true
+    },
+    "640x640": {
+      "avg_time_ms": 8.166000843048096,
+      "fps": 122.45896360044132,
+      "meets_requirement": true
+    },
+    "832x832": {
+      "avg_time_ms": 11.989035606384277,
+      "fps": 83.40954458984926,
+      "meets_requirement": true
+    }
+  },
+  "batch_processing": {
+    "1": {
+      "avg_time_per_batch_ms": 8.115899562835693,
+      "avg_time_per_image_ms": 8.115899562835693,
+      "fps_per_image": 123.2149304285624,
+      "total_fps": 123.2149304285624,
+      "success": true
+    },
+    "2": {
+      "avg_time_per_batch_ms": 16.43345355987549,
+      "avg_time_per_image_ms": 8.216726779937744,
+      "fps_per_image": 121.70296357445352,
+      "total_fps": 121.70296357445352,
+      "success": true
+    },
+    "4": {
+      "avg_time_per_batch_ms": 27.32369899749756,
+      "avg_time_per_image_ms": 6.83092474937439,
+      "fps_per_image": 146.39306341232717,
+      "total_fps": 146.39306341232717,
+      "success": true
+    },
+    "8": {
+      "avg_time_per_batch_ms": 49.865007400512695,
+      "avg_time_per_image_ms": 6.233125925064087,
+      "fps_per_image": 160.43314574776835,
+      "total_fps": 160.43314574776835,
+      "success": true
+    },
+    "16": {
+      "avg_time_per_batch_ms": 102.49658823013306,
+      "avg_time_per_image_ms": 6.406036764383316,
+      "fps_per_image": 156.10275694324181,
+      "total_fps": 156.10275694324181,
+      "success": true
+    }
+  },
+  "memory_usage": {
+    "gpu": {
+      "memory_before_mb": 88.13330078125,
+      "memory_after_mb": 30.88330078125,
+      "memory_used_mb": -57.25,
+      "memory_peak_mb": 115.92041015625,
+      "memory_total_mb": 3005.625
+    },
+    "cpu": {
+      "memory_before_mb": 874.390625,
+      "memory_after_mb": 832.23046875,
+      "memory_used_mb": -42.16015625
+    }
+  },
+  "validation": {
+    "map50": 0.01128158262744808,
+    "map50_95": 0.007493727292701375,
+    "precision": 0.01238205247398965,
+    "recall": 0.21434151957803843,
+    "fitness": 0.007872512826176046
+  },
+  "real_images": {
+    "total_images": 20,
+    "inference_times": [
+      43.000221252441406,
+      69.0009593963623,
+      30.248641967773438,
+      12.689828872680664,
+      11.543750762939453,
+      10.113716125488281,
+      10.416746139526367,
+      10.271549224853516,
+      10.33163070678711,
+      12.165307998657227,
+      10.35761833190918,
+      10.067224502563477,
+      10.251522064208984,
+      10.100603103637695,
+      9.862422943115234,
+      10.24770736694336,
+      10.19906997680664,
+      12.397050857543945,
+      10.247468948364258,
+      9.972095489501953
+    ],
+    "detection_counts": [
+      0,
+      2,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "average_confidence": [
+      0,
+      

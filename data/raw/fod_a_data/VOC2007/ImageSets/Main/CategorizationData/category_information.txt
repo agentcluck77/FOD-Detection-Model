@@ -1,0 +1,3 @@
+The indice of the list correspondes to the label in the category annotation file (e.g. the list [clear, rainy] means clear = 0 and rainy = 1).
+Weather: [Dry,Wet,]
+Light: [Bright,Dim,Dark,]

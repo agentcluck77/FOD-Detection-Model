@@ -1,0 +1,19 @@
+competition:
+  delivery_accuracy: 25
+  min_altitude: 50
+  target_fps: 15
+model:
+  name: yolov8n
+  pretrained: true
+paths:
+  data: data/processed/fod_yolo/data.yaml
+  models: data/models
+  output: runs/train
+training:
+  batch_size: 16
+  epochs: 100
+  img_size: 640
+  learning_rate: 0.01
+  patience: 20
+  save_period: 10
+  workers: 4

@@ -1,0 +1,64 @@
+{
+  "dataset_path": "data/processed/fod_yolo",
+  "statistics": {
+    "train": {
+      "images": 23640,
+      "labels": 23640,
+      "missing_labels": 0,
+      "missing_images": 0
+    },
+    "val": {
+      "images": 6745,
+      "labels": 6745,
+      "missing_labels": 0,
+      "missing_images": 0
+    },
+    "test": {
+      "images": 3408,
+      "labels": 3408,
+      "missing_labels": 0,
+      "missing_images": 0
+    }
+  },
+  "data_config": {
+    "names": {
+      "0": "AdjustableClamp",
+      "1": "AdjustableWrench",
+      "2": "Battery",
+      "3": "Bolt",
+      "4": "BoltNutSet",
+      "5": "BoltWasher",
+      "6": "ClampPart",
+      "7": "Cutter",
+      "8": "FuelCap",
+      "9": "Hammer",
+      "10": "Hose",
+      "11": "Label",
+      "12": "LuggagePart",
+      "13": "LuggageTag",
+      "14": "MetalPart",
+      "15": "MetalSheet",
+      "16": "Nail",
+      "17": "Nut",
+      "18": "PaintChip",
+      "19": "Pen",
+      "20": "PlasticPart",
+      "21": "Pliers",
+      "22": "Rock",
+      "23": "Screw",
+      "24": "Screwdriver",
+      "25": "SodaCan",
+      "26": "Tape",
+      "27": "Washer",
+      "28": "Wire",
+      "29": "Wood",
+      "30": "Wrench"
+    },
+    "nc": 31,
+    "path": "/home/aloysius/Desktop/SUAS/data/processed/fod_yolo",
+    "test": "test/images",
+    "train": "train/images",
+    "val": "val/images"
+  },
+  "status": "analyzed"
+}

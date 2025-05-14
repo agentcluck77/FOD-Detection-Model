@@ -1,0 +1,95 @@
+# FOD Detection Training Configuration
+# SUAS 2025 Competition
+
+# Model Configuration
+model:
+  name: 'yolov8n'        # Options: yolov8n, yolov8s, yolov8m, yolov8l, yolov8x
+  pretrained: true       # Start with pretrained weights
+  
+# Training Parameters
+training:
+  epochs: 100           # Number of training epochs
+  batch_size: 16        # Batch size (will be auto-adjusted for GPU memory)
+  img_size: 640         # Input image size
+  learning_rate: 0.01   # Initial learning rate
+  patience: 50          # Early stopping patience
+  save_period: 10       # Save checkpoint every N epochs
+  workers: 4           # Number of data loading workers
+  seed: 42             # Random seed for reproducibility
+
+# Data Augmentation Settings
+augmentation:
+  mosaic: 1.0          # Probability of mosaic augmentation
+  mixup: 0.15          # Probability of mixup augmentation
+  copy_paste: 0.3      # Probability of copy-paste augmentation
+  hsv_h: 0.015         # HSV hue augmentation
+  hsv_s: 0.7           # HSV saturation augmentation
+  hsv_v: 0.4           # HSV value augmentation
+  degrees: 10.0        # Rotation degrees
+  translate: 0.1       # Translation augmentation
+  scale: 0.9           # Scale augmentation range
+  shear: 2.0           # Shear degrees
+  perspective: 0.0     # Perspective augmentation
+  flipud: 0.0          # Probability of vertical flip
+  fliplr: 0.5          # Probability of horizontal flip
+
+# Paths Configuration
+paths:
+  data: 'data/processed/fod_yolo/data.yaml'  # Path to YOLO dataset config
+  output: 'runs/train'                       # Output directory for training runs
+  models: 'data/models'                      # Directory to save final models
+
+# Competition-Specific Settings
+competition:
+  target_fps: 15        # Minimum FPS requirement for competition
+  min_altitude: 50      # Minimum altitude in feet
+  delivery_accuracy: 25 # Required delivery accuracy in feet
+  max_weight: 45        # Maximum UAS weight in pounds
+
+# Hardware Optimization
+optimization:
+  auto_batch: true      # Automatically adjust batch size
+  cache: false          # Cache images in RAM (requires more memory)
+  close_mosaic: 10      # Disable mosaic in last N epochs
+  amp: true             # Enable Automatic Mixed Precision (AMP)
+
+# Validation Settings
+validation:
+  val_period: 5         # Validate every N epochs
+  save_best: true       # Save best model based on validation
+  save_last: true       # Save last epoch model
+  verbose: true         # Verbose validation output
+
+# Advanced Training Settings
+advanced:
+  warmup_epochs: 3      # Warmup epochs
+  warmup_momentum: 0.8  # Warmup momentum
+  warmup_bias_lr: 0.1   # Warmup bias learning rate
+  box: 7.5              # Box loss gain
+  cls: 0.5              # Classification loss gain
+  dfl: 1.5              # Distribution focal loss gain
+  pose: 12.0            # Pose loss gain (for pose estimation)
+  kobj: 1.0             # Keypoint objective loss gain
+  label_smoothing: 0.0  # Label smoothing
+
+# Class Names Mapping (Common FOD Objects)
+classes:
+  # Note: These will be automatically loaded from the data.yaml file
+  # This is just for reference
+  - 'person'
+  - 'bicycle'
+  - 'car'
+  - 'motorcycle'
+  - 'airplane'
+  - 'bus'
+  - 'boat'
+  - 'stop sign'
+  - 'sports ball'
+  - 'bottle'
+  - 'umbrella'
+  - 'suitcase'
+  - 'snowboard'
+  - 'tennis racket'
+  - 'baseball bat'
+  - 'skis'
+  - 'bed'
